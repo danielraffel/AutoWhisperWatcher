@@ -1,14 +1,19 @@
 # AutoWhisperWatcher
 
-AutoWhisperWatcher is a tool designed to monitor a directory on macOS for new audio files and automatically open them with [MacWhisper](https://goodsnooze.gumroad.com/l/macwhisper). It uses [fswatch](https://github.com/emcrisostomo/fswatch) to watch for file changes and `screen` to manage the script's execution in the background.
+AutoWhisperWatcher is a tool designed to monitor a directory on macOS for new audio files and automatically open them with [MacWhisper](https://goodsnooze.gumroad.com/l/macwhisper). When a new file is detected, the script automatically opens MacWhisper and transcribes the file using the application's default settings, making it perfect for quick audio processing without manual intervention. It utilizes [fswatch](https://github.com/emcrisostomo/fswatch) to watch for file changes and the terminal multiplexer `screen` to manage the script's execution in the background seamlessly.
 
 ## Installation
 
 ### Prerequisites
 
-- Homebrew: Make sure [Homebrew](https://raw.githubusercontent.com/Homebrew/) is installed on your macOS. If it's not installed, you can install it by running:
+- **Homebrew**: Ensure that [Homebrew](https://brew.sh) is installed on your system. If it's not installed, you can install it by running:
   ```bash
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
+- **MacWhisper**: Ensure that [MacWhisper](https://goodsnooze.gumroad.com/l/macwhisper) is installed on your system.
+- **GNU Screen**: Ensure that Screen is installed on your system. If it's not installed, you can install it with Homebrew by running:
+  ```bash
+  brew install screen
   ```
 
 ### Step 1: Install fswatch
