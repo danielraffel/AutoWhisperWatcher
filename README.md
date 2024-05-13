@@ -93,7 +93,7 @@ To stop the script:
    ```bash
    crontab -e
    ```
-2. Add the following line to run the script at reboot:
+2. Add the following line to run the script at reboot (update the path if your monitoring script is not in your Home directory):
    ```bash
    @reboot screen -dmS AutoWhisperWatcher $HOME/monitor.sh
    ```
